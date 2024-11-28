@@ -1,0 +1,92 @@
+{
+    "title": "Census Data",
+    "description": "A table from census data comparing geography with a population based statistic.",
+    "type": "object",
+    "properties": {
+        "requestDuration": {
+            "type": "number",
+            "description": "Time in milliseconds it took to process request and return the response."
+        },
+        "requestTokens": {
+            "type": "number",
+            "description": "Number of tokens spent in processing request."
+        },
+        "data": {
+            "type": "array",
+            "description": "Full response from census organization's API, cleaned for easier consumption.",
+            "items": {
+                "type": "object",
+                "description": "Geographic units with relevant population data (i.e. the table rows).",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Human readable name of a geography, such as United States or Alabama."
+                    },
+                    "geoID": {
+                        "type": "string",
+                        "description": "Unique identifier for geography, as defined by the census organization."
+                    },
+                    "groupID": {
+                        "type": "string",
+                        "description": "Unique identifier for the table or population data group within the census data set."
+                    },
+                    "groupLabel": {
+                        "type": "string",
+                        "description": "Name of the table or population data group within the census data set (e.g. Race/Ethnicity)"
+                    },
+                    "unit": {
+                        "type": "string",
+                        "description": "Universe of population data, something along the lines of individuals, families or households."
+                    },
+                    "categories": {
+                        "type": "array",
+                        "description": "Population data variables within a geographic unit (i.e. the table columns, such as numbers for each race when looking at diversity data).",
+                        "items": {
+                            "type": "object",
+                            "description": "Variable within population data group (e.g. White or Black within Race/Ethnicity).",
+                            "properties": {
+                                "variableID": {
+                                    "type": "string",
+                                    "description": "Unique identifier for variable within the census data group."
+                                },
+                                "variableLabel": {
+                                    "type": "string",
+                                    "description": "Name of the variable within the census data group (e.g. Total, White or Black)."
+                                },
+                                "value": {
+                                    "type": "number",
+                                    "description": "Value of variable, usually number of individuals or households."
+                                }
+                            },
+                            "required": [
+                                "variableID",
+                                "variableLabel",
+                                "value"
+                            ]
+                        }
+                    }
+                },
+                "required": ["name", "geoID", "groupID", "groupLabel", "unit"]
+            }
+        },
+        "dataURL": {
+            "type": "string",
+            "description": "API access URL, including query string parameters, used to fetch data from the census organization."
+        },
+        "dataSource": {
+            "type": "string",
+            "description": "Citation for the data returned from the census organization."
+        },
+        "analysis": {
+            "type": "string",
+            "description": "If necessary, the test response from the generative AI model with some preliminary analysis and basic statistics work on the data returned by the census organization's API."
+        }
+    },
+    "required": [
+        "requestDuration",
+        "requestTokens",
+        "data",
+        "dataURL",
+        "dataSource"
+    ]
+}

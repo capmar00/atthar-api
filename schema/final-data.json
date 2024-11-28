@@ -1,0 +1,25 @@
+{
+  "final_data": [
+    {
+      "location": "Agrigento",
+      "sex": "Female",
+      "age (years)": "total",
+      "time period": "2023",
+      "population": "211779"
+    },
+    {
+      "location": "Caltanissetta",
+      "sex": "Female",
+      "age (years)": "total",
+      "time period": "2023",
+      "population": "128605"
+    },
+    {
+      "location": "Palermo",
+      "sex": "Female",
+      "age (years)": "total",
+      "time period": "2023",
+      "population": "621075"
+    }
+  ]
+}

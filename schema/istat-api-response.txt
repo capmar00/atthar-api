@@ -1,0 +1,17 @@
+FIRST response - location id:  "ITG12+ITG15+ITG14"
+https://esploradati.istat.it/SDMXWS/rest/data/IT1,22_289_DF_DCIS_POPRES1_1,1.0/A.ITG12+ITG15+ITG14.JAN.2.TOTAL.99/ALL/?detail=full&startPeriod=2023-01-01&endPeriod=2023-12-31&dimensionAtObservation=TIME_PERIOD
+
+
+THIRD response - chosen function:  ChatCompletionMessage(content=None, refusal=None, role='assistant', function_call=None, tool_calls=[ChatCompletionMessageToolCall(id='call_UUGARAh22yuh4wkoGiAUxH2U', function=Function(arguments
+='{\n"location_ids": "ITG12+ITG15+ITG14",\n"sex": "2",\n"age": "TOTAL",\n"start_period": "2023-01-01",\n"end_period": "2023-12-31"\n}', name='fetch_population_for_locations_years_sex_age_via_sdmx'), type='function')])
+
+
+fn name fetch_population_for_locations_years_sex_age_via_sdmx
+
+
+params {'location_ids': 'ITG12+ITG15+ITG14', 'sex': '2', 'age': 'TOTAL', 'start_period': '2023-01-01', 'end_period': '2023-12-31'}
+
+
+final data [{'location': 'Agrigento', 'sex': 'Female', 'age (years)': 'total', 'time period': '2023', 'population': '211779'}, {'location': 'Caltanissetta', 'sex': 'Female', 'age (years)': 'total', 'time period': '2023', 'popula
+tion': '128605'}, {'location': 'Palermo', 'sex': 'Female', 'age (years)': 'total', 'time period': '2023', 'population': '621075'}]
+INFO:     127.0.0.1:49155 - "POST /?prompt=What%20is%20the%20female%20population%20of%20Palermo%2C%20Caltanissetta%20and%20Agrigento%3F HTTP/1.1" 200 OK

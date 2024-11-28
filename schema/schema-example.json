@@ -1,0 +1,54 @@
+{
+    "title": "Census Data",
+    "description": "A table from census data comparing geography with a population-based statistic.",
+    "type": "object",
+    "requestDuration": 0,
+    "requestTokens": 0,
+    "data": [
+        {
+            "name": "Agrigento",
+            "geoID": "ITG12",
+            "groupID": "CL_ETA1",
+            "groupLabel": "Age class",
+            "unit": "individuals",
+            "categories": [
+                {
+                    "variableID": "TOTAL",
+                    "variableLabel": "Total Population",
+                    "value": 211779
+                }
+            ]
+        },
+        {
+            "name": "Caltanissetta",
+            "geoID": "ITG15",
+            "groupID": "CL_ETA1",
+            "groupLabel": "Age class",
+            "unit": "individuals",
+            "categories": [
+                {
+                    "variableID": "TOTAL",
+                    "variableLabel": "Total Population",
+                    "value": 128605
+                }
+            ]
+        },
+        {
+            "name": "Palermo",
+            "geoID": "ITG14",
+            "groupID": "CL_ETA1",
+            "groupLabel": "Age class",
+            "unit": "individuals",
+            "categories": [
+                {
+                    "variableID": "TOTAL",
+                    "variableLabel": "Total Population",
+                    "value": 621075
+                }
+            ]
+        }
+    ],
+    "dataURL": "",
+    "dataSource": "Istat",
+    "analysis": ""
+}
